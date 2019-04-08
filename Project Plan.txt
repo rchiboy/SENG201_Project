@@ -1,0 +1,58 @@
+Goals:
+-Write UML 										(5%)
+-Implement command-line app (classes)							(20%)
+-Implement GUI (start with Section 2.1) 						(50%)
+(recommended to be finished one week after term break)
+-Documenting Javadoc uring implementation (each attribute, methods)			(5%)
+-Writing JUnit tests (for smaller classes) (not just testing getters/setters)		(15%)
+-Write a 2-page report									(5%)
+
+-Lab Demo (final week presentation, book now?)
+(might be asked abot how GUI & inheritance was written????)
+
+-Checkstyle??????
+
+-Set days
+-Create crew
+-view crew member
+	Includes:
+	-view status:
+		-view hunger
+		-view tiredness
+		-view health level
+		(might delete)
+
+	Extends:
+	- replenish stats:
+		-consume item:
+			-eat food
+			-use medical supply
+		-sleep
+
+	-repair shields
+	-search planet for parts
+	-choose pilots (from view crew member)
+
+-view spaceship
+	Include:
+	-show shield level (add image)
+	-view missing parts
+
+-Visit outpost
+	Include:
+	-view objects for sale
+	-view inventory
+
+	Extend:
+	-purchase object(s)
+
+-Move on next day
+
+Alien:
+-Steal item
+
+Space Plague:
+-infect crew member(s)
+
+Asteroid Belt:
+-decrease ship shield level
