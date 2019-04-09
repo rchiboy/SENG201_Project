@@ -8,7 +8,7 @@ Goals:
 -Write a 2-page report									(5%)
 
 -Lab Demo (final week presentation, book now?)
-(might be asked abot how GUI & inheritance was written????)
+(might be asked about how GUI & inheritance was written????)
 
 -Checkstyle??????
 
