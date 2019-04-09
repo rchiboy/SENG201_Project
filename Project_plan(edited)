@@ -38,8 +38,8 @@ ACTORS:
 	-View spaceship
 		Include:
 		-View status:
-      -show shield level (add image)
-      -view missing parts
+		      -show shield level (add image)
+		      -view missing parts
 
 	-Visit outpost
 		Include:
