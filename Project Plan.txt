@@ -12,47 +12,50 @@ Goals:
 
 -Checkstyle??????
 
--Set days
--Create crew
--view crew member
-	Includes:
-	-view status:
-		-view hunger
-		-view tiredness
-		-view health level
-		(might delete)
+ACTORS:
+- You
+	-Set days
+	-Create crew
+	-view crew member
+		Includes:
+		-view status:
+			-view hunger
+			-view tiredness
+			-view health level
+			(might delete)
 
-	Extends:
-	- replenish stats:
-		-consume item:
-			-eat food
-			-use medical supply
-		-sleep
+		Extends:
+		- replenish stats:
+			-consume item:
+				-eat food
+				-use medical supply
+			-sleep
 
-	-repair shields
-	-search planet for parts
-	-choose pilots (from view crew member)
+		-repair shields
+		-search planet for parts
+		-choose pilots (from view crew member)
 
--view spaceship
-	Include:
-	-show shield level (add image)
-	-view missing parts
+	-view spaceship
+		Include:
+		
+		-show shield level (add image)
+		-view missing parts
 
--Visit outpost
-	Include:
-	-view objects for sale
-	-view inventory
+	-Visit outpost
+		Include:
+		-view objects for sale
+		-view inventory
 
-	Extend:
-	-purchase object(s)
+		Extend:
+		-purchase object(s)
 
--Move on next day
+	-Move on next day
 
-Alien:
--Steal item
+- Alien
+	-Steal item
 
-Space Plague:
--infect crew member(s)
+- Space Plague
+	-infect crew member(s)
 
-Asteroid Belt:
--decrease ship shield level
+- Asteroid Belt
+	-decrease ship shield level
