@@ -18,7 +18,7 @@ public class Rocketship {
 			shieldLevel = 100;
 		}
 		System.out.println("Shields have been repaired by " + amount
-				+ ". Shield level is now " + shieldLevel);
+				+ ". Shield level is now " + shieldLevel + ".");
 	}
 	
 	public void damageShields(int amount) {
@@ -27,7 +27,7 @@ public class Rocketship {
 			shieldLevel = 0;
 		}
 		System.out.println("Shields have been damaged by asteroid belt for " + amount
-				+ ". Shield level is now " + shieldLevel);
+				+ ". Shield level is now " + shieldLevel + ".");
 	}
 	
 	public static void main(String args[]) {
