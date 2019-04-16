@@ -3,9 +3,11 @@
 	<name>SENG201_Project</name>
 	<comment></comment>
 	<projects>
+		<project>ProjectFiles</project>
 	</projects>
 	<buildSpec>
 	</buildSpec>
 	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
 </projectDescription>
