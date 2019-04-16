@@ -16,11 +16,9 @@ public class MedKit extends Item{
 	public boolean canCure() {
 		return healPlague;
 	}
-	
-	public void healMember(Crewmember member, int quality) {
-		member.healSelf(quality);
+
+	public static void main(String args[]) {
+		
 	}
-	
-	
 
 }
