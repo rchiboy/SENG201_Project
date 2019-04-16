@@ -11,10 +11,5 @@ public class Food extends Item {
 	public int getValue() {
 		return foodValue;
 	}
-	
-	public void feedMember(Crewmember member, int quality) {
-		member.eatFood(quality);
-	}
-	
-	
+
 }
