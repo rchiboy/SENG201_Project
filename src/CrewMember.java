@@ -73,6 +73,17 @@ public class CrewMember {
 		}
 	}
 	
+	public boolean takeDamage(int quality) {
+		health -= quality;
+		boolean isDead = false;
+		if (health < 0) {
+			health = 0;
+			isDead = true;
+			System.out.println("Crew member " + name + " has died from the plague.");
+		}
+		return isDead;
+	}
+	
 	public void repairedShields() {
 		if (tiredness < 100) {
 			if (numActions > 0) {
