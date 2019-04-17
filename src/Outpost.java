@@ -6,10 +6,10 @@ public class Outpost {
 	private ArrayList<Food> foodList;
 	
 	public void initItems() {
-		MedKit smallMedKit = new MedKit("Small MedKit", 30, 25);
-		MedKit mediumMedKit = new MedKit("Medium MedKit", 60, 50);
-		MedKit largeMedKit = new MedKit("Large Medkit", 100, 50);
-		MedKit antidote = new MedKit("Antidote", 80, 50);
+		MedKit smallMedKit = new MedKit("Small MedKit", 30, 25, false);
+		MedKit mediumMedKit = new MedKit("Medium MedKit", 60, 50, false);
+		MedKit largeMedKit = new MedKit("Large Medkit", 100, 100, false);
+		MedKit antidote = new MedKit("Antidote", 80, 0, true);
 		medkitList.add(smallMedKit);
 		medkitList.add(mediumMedKit);
 		medkitList.add(largeMedKit);

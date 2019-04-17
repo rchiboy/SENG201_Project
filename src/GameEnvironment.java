@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Scanner;
 
 
 public class GameEnvironment {
@@ -43,6 +44,10 @@ public class GameEnvironment {
 		return currentDay;
 	}
 	
+	public ArrayList<String> getTypes() {
+		return crewTypes;
+	}
+	
 	public int getCrewSize() {
 		return crewSize;
 	}
@@ -69,13 +74,16 @@ public class GameEnvironment {
 		crewSize = size;
 	}
 	
-	public void setCrew(String name) {
-		crew.Crew(name, crewSize);
-	}
+//	public void setCrew(String name) {
+//		crew.Crew(name, crewSize);
+//	}
 	
-	public void addMember(CrewMember member) {
-		crew.getMembers().add(member);
-	}
+//	public void addMember(String name, String type) {
+//		CrewMember member = new CrewMember(name, type);
+//		
+//		crew.addMember(member);
+//	}
+	
 	
 	
 	// game mechanics
@@ -86,6 +94,27 @@ public class GameEnvironment {
 		 */
 	}
 	
+	
+	// JUST FOUND OUT THAT WE CAN'T DO THESE ACTIONS TO CHANGE THE VALUES IN A LIST
+	// WE NEED TO DO THE ARITHMETIC OPERATIONS INSIDE THEIR RESPECTIVE CLASSES
+	
+//	public void buyFood() {
+//		int money = crew.currentMoney();
+//		crew.addFood(outpost.buyFood(0));
+//	}
+	
+	public void buyMedKit() {
+		int money = crew.currentMoney();
+		MedKit itemToBuy = outpost.buyMedKit(0);
+		if (money >= itemToBuy.getCost()) {
+			crew.addMedKit(itemToBuy);
+			crew.decreaseMoney(itemToBuy.getCost());
+		}
+		else {
+			System.out.println("Not enough money!");
+		}
+	}
+	
 	public void feedMember(int index, int quality) {
 		crew.getMembers().get(index).eatFood(quality);
 	}
@@ -94,19 +123,8 @@ public class GameEnvironment {
 		crew.getMembers().get(index).healSelf(quality);
 	}
 	
-	public void increaseShieldLevel() {
-		CrewMember member = crew.getMembers().get(index);
-		int bonus = 0;
-		if (member.viewType() == "Mechanic") {
-			bonus = 15;
-		}
-		crew.ship.increaseShields(member.viewRepairValue() + bonus);
-		member.repairedShields();
-	}
-	
-	public void endGame() {
-		// GameOverScreen endScreen = new GameOverScreen(this);
-		// (need to somehow calculate a score?)
+	public void increaseShieldLevel(int index) {
+		crew.repairShields(index);
 	}
 	
 	// SPACE FOR GUI CLASSES
@@ -119,12 +137,23 @@ public class GameEnvironment {
  	* 
 	*/
 	
-	
-	public static void main(String args[]) {
-		GameEnvironment game = new GameEnvironment();
-		game.initTypes();
-		// game.launchMenuScreen();
-		
+	public void endGame() {
+		// GameOverScreen endScreen = new GameOverScreen(this);
+		// (need to somehow calculate a score?)
 	}
+	
+	
+	
+	
+//	public static void main(String[] args) {
+//		GameEnvironment game = new GameEnvironment();
+//		game.initTypes();
+//		System.out.println("Welcome! Create your crew.");
+//		System.out.println(game.getTypes());
+//		Scanner prompt = new Scanner(System.in);
+//		System.out.println(prompt.nextLine());
+////		 game.launchMenuScreen();
+//		
+//	}
 	
 }
