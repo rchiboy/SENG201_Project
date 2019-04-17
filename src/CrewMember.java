@@ -1,10 +1,11 @@
 
 public class CrewMember {
 
+	private String name;
+	private String type;
 	private int hunger = 0;
 	private int tiredness = 0;
 	private int health = 100;
-	private String type;
 	private int numActions = 2;
 	private boolean infectState = false;
 	private int repairValue = 25;
