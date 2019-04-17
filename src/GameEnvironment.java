@@ -2,17 +2,15 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 
-//TEST
-//PULL TEST
-
 public class GameEnvironment {
 	
+	// initialize
 	private int numDays;
 	private int numPieces;
 	private int numPlanets;
+	private int currentDay = 1;
 	private int crewSize;
 	
-	//WILL HAVE TO INSTANTIATE TYPE NAMES
 	private ArrayList<String> crewTypes;
 	
 	private Crew crew;
@@ -27,6 +25,8 @@ public class GameEnvironment {
 		crewTypes.add("Pilot");
 	}
 
+	
+	// getters
 	public int getDays() {
 		return numDays;
 	}
@@ -37,6 +37,10 @@ public class GameEnvironment {
 	
 	public int getPlanets() {
 		return numPlanets;
+	}
+	
+	public int getCurrentDay() {
+		return currentDay;
 	}
 	
 	public int getCrewSize() {
@@ -52,6 +56,7 @@ public class GameEnvironment {
 	}
 	
 
+	// setters
 	public void setDays(int days) {
 		numDays = days;
 	}
@@ -64,12 +69,21 @@ public class GameEnvironment {
 		crewSize = size;
 	}
 	
-	public void setCrew(name) {
+	public void setCrew(String name) {
 		crew.Crew(name, crewSize);
 	}
 	
 	public void addMember(CrewMember member) {
 		crew.getMembers().add(member);
+	}
+	
+	
+	// game mechanics
+	public void nextDay() {
+		currentDay += 1;
+		/* if (currentDay == numDays) {
+		 * 		game.endGame();
+		 */
 	}
 	
 	public void feedMember(int index, int quality) {
@@ -90,6 +104,10 @@ public class GameEnvironment {
 		member.repairedShields();
 	}
 	
+	public void endGame() {
+		// GameOverScreen endScreen = new GameOverScreen(this);
+		// (need to somehow calculate a score?)
+	}
 	
 	// SPACE FOR GUI CLASSES
 	
@@ -106,8 +124,6 @@ public class GameEnvironment {
 		GameEnvironment game = new GameEnvironment();
 		game.initTypes();
 		// game.launchMenuScreen();
-		// ^ this acts kinda like inheritance, where MenuScreen can initialize
-		//   all the necessary variables, such as days, crew size, and crew members
 		
 	}
 	
