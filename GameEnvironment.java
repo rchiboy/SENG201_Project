@@ -13,12 +13,14 @@ public class GameEnvironment {
 	private int crewSize;
 	
 	//WILL HAVE TO INSTANTIATE TYPE NAMES
-	private String[] crewTypes;
+	private ArrayList<String> crewTypes;
 	
 	private Crew crew;
 	private Outpost outpost;
 	
-	
+	public void initTypes() {
+		crewTypes.add
+	}
 
 	public int getDays() {
 		return numDays;
