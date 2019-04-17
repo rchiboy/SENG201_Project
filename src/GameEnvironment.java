@@ -19,7 +19,12 @@ public class GameEnvironment {
 	private Outpost outpost;
 	
 	public void initTypes() {
-		crewTypes.add
+		crewTypes.add("Cyborg");
+		crewTypes.add("Mechanic");
+		crewTypes.add("Scout");
+		crewTypes.add("Haggler");
+		crewTypes.add("Medic");
+		crewTypes.add("Pilot");
 	}
 
 	public int getDays() {
@@ -55,13 +60,12 @@ public class GameEnvironment {
 		numPieces = Math.round(numDays * (2 / 3));
 	}
 	
-	//MIGHT HAVE TO CHANGE THIS?
-	public void setPlanets(int planets) {
-		numPlanets = numPieces;
-	}
-	
 	public void setCrewSize(int size) {
 		crewSize = size;
+	}
+	
+	public void setCrew(name) {
+		crew.Crew(name, crewSize);
 	}
 	
 	public void addMember(CrewMember member) {
@@ -76,12 +80,34 @@ public class GameEnvironment {
 		crew.getMembers().get(index).healSelf(quality);
 	}
 	
-	//manual test
+	public void increaseShieldLevel() {
+		CrewMember member = crew.getMembers().get(index);
+		int bonus = 0;
+		if (member.viewType() == "Mechanic") {
+			bonus = 15;
+		}
+		crew.ship.increaseShields(member.viewRepairValue() + bonus);
+		member.repairedShields();
+	}
+	
+	
+	// SPACE FOR GUI CLASSES
+	
+	/*public void launchMenuScreen() {
+	*	MenuScreen menuScreen = new MenuScreen(this);
+	*
+	* ^ this acts kinda like inheritance, where MenuScreen can initialize
+ 	* all the necessary variables, such as days, crew size, and crew members
+ 	* 
+	*/
+	
+	
 	public static void main(String args[]) {
-		
-		int test = 2 / 3;
-		System.out.println("test value: " + test + " rounded value: "
-				+ Math.round(test));
+		GameEnvironment game = new GameEnvironment();
+		game.initTypes();
+		// game.launchMenuScreen();
+		// ^ this acts kinda like inheritance, where MenuScreen can initialize
+		//   all the necessary variables, such as days, crew size, and crew members
 		
 	}
 	
